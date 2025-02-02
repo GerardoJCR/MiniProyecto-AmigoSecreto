@@ -1,10 +1,11 @@
-/* Estilos generales */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #0d0d0d;
     color: #fff;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -15,6 +16,7 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 15px;
+    
 }
 
 .header-banner {
@@ -27,7 +29,7 @@ body {
 }
 
 .main-title {
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: "Playfair Display", serif;
     /* text-transform: uppercase; */
     color: #0ff;    
@@ -37,10 +39,10 @@ img {
     width: 450px;   
 }
 
-/* Sección de entrada */
 .input-section {
     background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    padding: 20px 0;
+    box-sizing: border-box;
     border-radius: 10px;
     box-shadow: 0 0 10px #0ff;
 }
@@ -72,7 +74,17 @@ img {
     box-shadow: 0 0 10px #0ff;
 }
 
-/* Botones con efecto neón */
+/* buttons with neon effect  */
+.button-container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    button{
+        background: linear-gradient(90deg, rgb(0, 255, 157), rgba(132, 132, 229, 0.384));
+    box-shadow: 0 0 10px #0ff;
+    }
+}
 button {
     padding: 10px 15px;
     font-size: 1rem;
@@ -86,12 +98,14 @@ button {
     box-shadow: 0 0 10px #0ff;
 }
 
+
+
 button:hover {
     box-shadow: 0 0 15px #0ff, 0 0 30px #00f;
     transform: scale(1.05);
 }
 
-/* Listas */
+/* Lists */
 .name-list, .result-list {
     list-style: none;
     padding: 0;
@@ -118,12 +132,67 @@ button:hover {
     transform: scale(1.05);
 }
 
-
-
-.button-draw img {
-    margin-right: 40px;
+footer {
+    width: 100%;
+     
+    bottom: 0;
+    
 }
 
-.button-draw:hover {
-    background-color: var(--color-button-hover);
+.footer-text{
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+    color: #0ff;
 }
+.footer-text a {
+    color: #0ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.footer-text a:hover {
+    color: #ff0;
+    text-shadow: 0 0 10px #ff0, 0 0 20px #0ff;
+}
+
+
+
+/* movil */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    .input-section{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 100vw;
+        max-width: 100vw;
+        align-items: center;
+        margin: 0;
+    }
+    
+
+}
+
+/*  tablets */
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 15px;
+    }
+
+    img {
+        width: 300px;
+    }
+}
+
+/* desktop */
+@media (max-width: 1440px) {
+    .main-content {
+        max-width: 900px;
+    }
+}
+
