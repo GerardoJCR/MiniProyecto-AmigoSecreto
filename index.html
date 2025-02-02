@@ -3,13 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amigo Secreto</title>
+    <title>Secret Friend</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/3429193.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <main class="main-content">
+        <header class="header-banner">
+            <h1 class="main-title">Secret Friend</h1>
+            <img src="/img/amigo-secreto.png" alt="Our Secret Friend">
+        </header>
+        <section class="input-section">
+            
+                <div class="title-wrapper">
+                    <h2>Write the name of your friend</h2>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="input-name" placeholder="Enter your name">
+                    <button class="button-add" onclick="addFriend()">Add</button>
+                </div>
 
+                <ul id="listFriends" class="name-list" aria-labelledby="listFriends" role="list"></ul>
+                <ul id="result" class="result-list" aria-live="polite"></ul>
+
+                <div class="button-container">
+                    <button class="button-draw" onclick="sortFriend()" aria-label="Sort secret Friend">
+                        Sort Friend
+                    </button>
+                </div>
+            
+        </section>
+        <!-- <footer>By Gerardo</footer>  -->
     </main>
     <script src="main.js"></script>
 </body>
